@@ -52,4 +52,4 @@ class LibraryModel {
 
 }
 
-module.exports LibraryModel;
+module.exports = LibraryModel;

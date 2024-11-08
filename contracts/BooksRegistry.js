@@ -19,14 +19,16 @@ class BooksRegistry {
             book.title = title || book.title;
             book.author = author || book.author;
             book.isbn = isbn || book.usbn;
-            return `Book with ID: ${bookId} not found!`;
+            return `Book with ID: ${bookId} updated successfully!`;
         }
-
-        // Get all books
-        async getAllBooks() {
-            return this.books;
-        }
+        return `Book with ID: ${bookId} not found!`
     }
+
+      // Get all books
+      async getAllBooks() {
+        return this.books;
+    }
+
 }
 
-module.exports = BooksRegistry;r
+module.exports = BooksRegistry;
