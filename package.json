@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "klayr-sdk": "^6.1.3"
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"downloadBindings.js","sourceRoot":"","sources":["../../src/scripts/downloadBindings.ts"],"names":[],"mappings":";;;AAAA,iDAA4C;AAC5C,mCAAsC;AACtC,iEAA4D;AAErD,KAAK,UAAU,gBAAgB,CAAC,UAAkB;IACvD,MAAM,UAAU,GAAG,qBAAa,EAAE,CAAC;IAEnC,MAAM,2CAAoB,CAAC,UAAU,EAAE,UAAU,CAAC,CAAC;IAEnD,qCAAqC;IACrC,MAAM,2BAAY,CAAC,UAAU,CAAC,CAAC;AACjC,CAAC;AAPD,4CAOC"}
