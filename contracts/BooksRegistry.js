@@ -23,7 +23,7 @@ class BooksRegistry {
         }
 
         // Get all books
-        async GetAllBooks() {
+        async getAllBooks() {
             return this.books;
         }
     }
