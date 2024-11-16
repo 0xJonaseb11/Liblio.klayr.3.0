@@ -1,6 +1,17 @@
+const { Contract } = require("klayr-sdk");
+const AccessControl = require("./AccessControl");
+const AccessControlContract = await ethers.getContractFactory("AccessControl");
+const deployedAccessControl = await AccessControlContract.deploy();
+const accessControlContract = new Contract(deployedAccessControl.address);
+console.log(accessControlContract);
+
+///////////////////////////////////
+///////// DEBUG FROM HERE//////////
+//////////////////////////////////
+
 class BooksRegistry {
     constructor () {
-        this.books = {}; // mapping bool IDs to details
+        this.books = {}; // mapping book IDs to details
     }
 
     // Register a book in the system
@@ -15,6 +26,8 @@ class BooksRegistry {
     // update book information
     async updateBool(bookId, title, author, isbn) {
         const book = this.books[bookId];
+        // access control
+        // const accessCheck = await access
         if (book) {
             book.title = title || book.title;
             book.author = author || book.author;
