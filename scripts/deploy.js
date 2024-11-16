@@ -8,7 +8,7 @@ async function deployContracts() {
     const booksRegistryContract = new BooksRegistry();
     const booksUtilizationContract = new BookUtilization();
 
-    // / Register the contracts to the blockchain(hypothetical deploy function)
+    // Register the contracts to the blockchain(hypothetical deploy function)
     const deployedLibraryModelContract = await deploy(librarymodelContract);
     const deployedBooksRegistryContract = await deploy(booksRegistryContract);
     const deployedBookUtilizationContract =  await deploy(booksUtilizationContract);

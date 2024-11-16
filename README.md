@@ -1,7 +1,7 @@
 # klayr-dapp
 
 ## About
-A decetralized app built on Klayr blockchain powererd by Javacript
+A decetralized app built on Klayr blockchain powered by Javacript
 
 ## Installation
 
