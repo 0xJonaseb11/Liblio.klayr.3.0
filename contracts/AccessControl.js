@@ -11,6 +11,13 @@ class AccessControl {
 
     // Assign a role to user
     async assignRole(userId, role) {
+
+          // Assign roles
+    console.log(await accessControlContract.assignRole(1, 'admin')); // User 1 is an admin
+    console.log(await accessControlContract.assignRole(2, 'librarian')); // User 2 is a librarian
+    console.log(await accessControlContract.assignRole(3, 'member')); // User 3 is a member
+
+
         if (!this.roles.includes(role)) {
             return `Invalid role. Available roles are: ${this.roles.join(', ')}`;
         }
