@@ -1,9 +1,14 @@
 const { Contract } = require("klayr-sdk");
 const AccessControl = require("./AccessControl");
-const AccessControlContract = await ethers.getContractFactory("AccessControl");
-const deployedAccessControl = await AccessControlContract.deploy();
-const accessControlContract = new Contract(deployedAccessControl.address);
-console.log(accessControlContract);
+
+async function main() {
+    const AccessControlContract = await ethers.getContractFactory("AccessControl");
+    const deployedAccessControl = await AccessControlContract.deploy();
+    const accessControlContract = new Contract(deployedAccessControl.address);
+    console.log(accessControlContract);
+}
+main();
+
 
 ///////////////////////////////////
 ///////// DEBUG FROM HERE//////////
