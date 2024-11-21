@@ -1,8 +1,7 @@
-import "./deploy";
-
 const { Contract } = require("klayr-sdk");
 const libraryContract = "LIBRARY_MODEL_ADDRESS";
 const BookUtilizationContract = "BOOK_UTILIZATION_ADDRESS";
+const deploy = require("./deploy")
 
 // usage
 // register and borrow a book

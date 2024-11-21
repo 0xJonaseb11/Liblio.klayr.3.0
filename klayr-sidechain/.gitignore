@@ -1,0 +1,6 @@
+# noce_modules
+node_modules
+.env.local
+cache
+build
+coverage
