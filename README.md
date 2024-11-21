@@ -6,15 +6,15 @@
 
 ## Overview
 
-<div>
+
 **Liblio.klayr.3.0** is a cutting-edge decentralized application (dApp) built on the **Klayr Blockchain** designed to revolutionize how educational institutions manage their library systems. This system empowers schools and universities to maintain a transparent, secure, and efficient digital ledger of books, users, and transactions, ensuring an accessible and tamper-proof library management solution.
 
 By leveraging blockchain technology, **Liblio** transforms traditional library systems into decentralized networks, where all operations, such as book borrowing, returns, and access control, are securely recorded. Whether for students, librarians, or administrators, **Liblio** offers a seamless experience while maintaining full transparency and accountability.
-</div>
 
-<div>
+
+
 **Liblio** was developed as part of a hackathon challenge and aims to significantly impact students' academic journeys by simplifying the management of library resources and providing a trustworthy and easy-to-use platform for everyone involved.
-</div>
+
 
 ## Table of Contents
 
