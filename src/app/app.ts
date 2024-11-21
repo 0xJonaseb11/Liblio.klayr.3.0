@@ -72,7 +72,7 @@ export const getApplication  =(config: Types.PartialApplicationConfig) : Applica
 		async updateBookHandler(bookId: string, title: string, author: string, isbn: string) {
 			const result = await deployedBooksRegistryContract.updateBook(bookId, title, author, isbn);
 			console.log(result);
-		}
+		},
 
 		// Book borrowinf handlers
 		async borrowBookHandler(userId: string, bookId: string) {

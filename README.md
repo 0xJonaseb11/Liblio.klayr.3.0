@@ -1,5 +1,7 @@
 # Liblio.klayr.3.0
 
+![Liblio-Logo](./assets/Liblio-logo.png)
+
  ( A Decentralized Library Management System on Klayr Blockchain )
 
 ## Overview

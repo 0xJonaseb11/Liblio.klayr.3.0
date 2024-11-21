@@ -1,39 +1,39 @@
-import { Contract } from 'klayr-sdk';
-import { getApplication } from './app'; // Assuming this exports the initialized app
+/* eslint-disable import/no-unresolved */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+// /services/blockchainServices.ts
 
-// Assuming contracts are already deployed
-const deployedBooksRegistryContract = new Contract(getApplication(), 'BooksRegistry');
-const deployedAccessControlContract = new Contract(getApplication(), 'AccessControl');
+import { KlayrClient } from 'klayr/sdk';
 
-// Function to check user's role
-export const checkRole = async (userId: string, role: string) => {
+const KLAYR_HOST = '127.0.0.1';
+const KLAYR_PORT = 7887;
+const CHAIN_ID = '22049999';
+
+const klayrClient = new KlayrClient({
+    network: `http://${KLAYR_HOST}:${KLAYR_PORT}`,
+    chainId: CHAIN_ID,
+});
+
+// Fetch status of books
+export const fetchBookStatus = async () => {
     try {
-        const result = await deployedAccessControlContract.canAccess(userId, role);
-        return result.includes('authorized');
+        const response = await klayrClient.chain.callContractMethod('LibraryModel', 'getBookStatus', {});
+        return response.result; // Assumes the response has { borrowed, available, missed }
     } catch (error) {
-        console.error("Error checking role:", error);
-        return false;
+        console.error('Error fetching book status:', error);
+        return { borrowed: 0, available: 0, missed: 0 };
     }
 };
 
-// Function to get all books
-export const getBooks = async () => {
+// Fetch all books
+export const fetchBooks = async () => {
     try {
-        const books = await deployedBooksRegistryContract.getAllBooks();
-        return books;
+        const response = await klayrClient.chain.callContractMethod('BooksRegistry', 'getAllBooks', {});
+        return response.result; // Assumes the result is an array of book objects
     } catch (error) {
-        console.error("Error fetching books:", error);
+        console.error('Error fetching books:', error);
         return [];
-    }
-};
-
-// Function to get the status of a book (borrowed, available, missed)
-export const getBookStatus = async (bookId: string) => {
-    try {
-        const status = await deployedBooksRegistryContract.getBookStatus(bookId);
-        return status;
-    } catch (error) {
-        console.error("Error fetching book status:", error);
-        return 'Error fetching status';
     }
 };
